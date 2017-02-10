@@ -37,7 +37,7 @@ This will run an instance of the API on Port 8080. Navigate to http://0.0.0.0:80
 It is recommended that for production purposes, you run PHP-FPM with a reverse proxy such as Nginx in front of it.
 
 ## The MIT License (MIT)
-Copyright (c) 2016 Jackson Palmer
+Copyright (c) 2017 Jackson Palmer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
