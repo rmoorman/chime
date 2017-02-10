@@ -1,0 +1,32 @@
+{
+    "name": "ummjackson/chime",
+    "description": "A social network in the form of a RESTful API",
+    "keywords": ["social"],
+    "homepage": "http://ummjackson.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jackson Palmer",
+            "email": "hello@ummjackson.com",
+            "homepage": "http://ummjackson.com/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "slim/slim": "2.*",
+        "slim/views": "0.*",
+        "twig/twig": "1.*",
+        "vlucas/valitron": "^1.2",
+        "palanik/corsslim": "^1.1",
+        "nojimage/twitter-text-php": "^1.1",
+        "j4mie/idiorm": "^1.5",
+        "illuminate/database": "^5.4",
+        "wixel/gump": "^1.4",
+        "firebase/php-jwt": "^4.0"
+    },
+    "autoload": {
+        "classmap" : [
+            "app/models"
+        ]
+    }
+}
