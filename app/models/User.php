@@ -3,7 +3,7 @@
 class User extends Base
 {
 
-	protected $visible = ['username', 'name', 'bio', 'website', 'location', 'avatar_url', 'posts_count', 'followers_count', 'following_count', 'is_following', 'is_followed'];
+	protected $visible = ['username', 'name', 'bio', 'website', 'location', 'color', 'avatar_url', 'posts_count', 'followers_count', 'following_count', 'is_following', 'is_followed'];
 
     protected $rules = array(
         'create' => [
