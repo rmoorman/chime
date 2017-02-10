@@ -8,6 +8,8 @@ There is a running instance of chime you can play with @ https://chime.social
 
 ## Developing
 
+Tested on macOS Sierra and Ubuntu 16.04 running PHP 7.0.x and up.
+
 ####1. First, clone the repo:
 
 `git clone https://github.com/ummjackson/chime.git`
