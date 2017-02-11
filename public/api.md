@@ -46,7 +46,15 @@ A description of your app and numeric access level must be provided. Access leve
 2. Read/Write
 3. Read/Write & Account/Profile Settings
 
-### Get Timeline <span class="level one"></span>
+### Get All Public Posts <span class="level one"></span>
+
+- GET /public
+- Accept: application/json
+- Authorization: Bearer [access_token]. *Optional*
+
+Returns the latest public posts from all users across the network. Will return 20 posts. Results can be paged through using the ?offset= parameter. For example, ?offset=20 and so forth.
+
+### Get Personalized Timeline <span class="level one"></span>
 
 - GET /timeline
 - Accept: application/json
