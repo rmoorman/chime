@@ -45,7 +45,6 @@ $app->get('/users/:username/posts', $auth(0), $paginate, function($username) use
 
     $posts = $user->posts()
         ->withCount('comments', 'likes')
-        ->with('user')
 		->when($app->authenticated, function ($query) use ($app) {
 		        return $query->with([ 'likes' => function ($query) use ($app) {
                    return $query->where('user_id', $app->user_id);
@@ -82,7 +81,6 @@ $app->get('/users/:username/comments', $auth(0), $paginate, function($username) 
 
     $comments = $user->comments()
         ->withCount('likes')
-        ->with('user')
 		->when($app->authenticated, function ($query) use ($app) {
 		        return $query->with([ 'likes' => function ($query) use ($app) {
                    return $query->where('user_id', $app->user_id);
