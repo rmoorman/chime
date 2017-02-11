@@ -2,6 +2,8 @@ chime is a social network in the form of a RESTful API. You can interact with th
 
 Developer? You can browse the open-source code @ https://github.com/ummjackson/chime
 
+Have questions about the API? Chat with fellow developers @ https://discord.gg/PtdN8hJ
+
 ## API Endpoints
 
 ### Register a new account <span class="level none"></span>
