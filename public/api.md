@@ -31,7 +31,7 @@ Email is required for Gravatar avatar image and password recovery (to be impleme
 {
     "username": "example", // Required
     "password": "password" // Required
-    "client_description": "My Chime App" // Required, alpha-numeric + spaces, between 1 and 100 characters
+    "description": "My Chime App" // Required, alpha-numeric + spaces, between 1 and 100 characters
     "access_level": 2 // Required, integer between 1 and 3 as per below access levels
 }
 ```
