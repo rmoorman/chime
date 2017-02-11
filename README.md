@@ -6,6 +6,8 @@ chime is a social network in the form of a RESTful API. Currently under developm
 
 There is a running instance of chime you can play with @ https://chime.social
 
+Have questions? Chat with fellow developers @ https://discord.gg/PtdN8hJ
+
 ## Developing
 
 Tested on macOS Sierra and Ubuntu 16.04 running PHP 7.0.x and up.
