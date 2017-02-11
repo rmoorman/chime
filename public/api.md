@@ -160,7 +160,7 @@ Unlikes the post from the current account.
 
 ### Delete A Comment <span class="level two"></span>
 
-- DELETE /posts/[post_id]
+- DELETE /comments/[comments_id]
 - Accept: application/json
 - Authorization: Bearer [access_token]
 
@@ -219,7 +219,7 @@ Updates the authorized user's profile. All fields are optional, only those provi
 
 ### View Access Tokens <span class="level three"></span>
 
-- POST /account/tokens
+- GET /account/tokens
 - Accept: application/json
 - Authorization: Bearer [access_token]
 
