@@ -1,5 +1,32 @@
 <?php
 
+// GET: /public
+$app->get('/public', $auth(0), $paginate, function() use ($app) {
+    
+    $posts = Post::withCount('comments', 'likes')
+    ->with('user')
+    ->when($app->authenticated, function ($query) use ($app) {
+            return $query->with([ 'likes' => function ($query) use ($app) {
+               return $query->where('user_id', $app->user_id);
+        }]);
+            })
+    ->latest()->skip($app->offset)->take(20)->get();
+
+    if (!$posts) {
+        $app->halt(404, json_encode(['message' => 'There was an error']));
+    }
+
+    // Iterate and check if each post is liked (authenticated)
+    if ($app->authenticated) {
+        $posts->each(function($item) use ($app) {
+            $item->is_liked($app->user_id);
+        });
+    }
+
+    $app->halt(200, json_encode($posts)); 
+
+});
+
 // POST: /account/register
 $app->post('/account/register', function () use ($app) {
 
