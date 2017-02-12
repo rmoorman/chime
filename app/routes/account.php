@@ -45,7 +45,7 @@ $app->post('/account/register', function () use ($app) {
 
     // Check if username already exists
     if ($user->usernameExists($request['username'])) {
-        $app->halt(200, json_encode(['message' => 'Username is already taken, try another']));
+        $app->halt(400, json_encode(['message' => 'Username is already taken, try another']));
     }
 
     // Set user object properties
