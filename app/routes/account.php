@@ -56,7 +56,7 @@ $app->post('/account/register', function () use ($app) {
  
     // Try to save, fail if there is an issue       
     if(!$user->save()) {
-        $app->halt(200, json_encode(['message' => 'There was a problem creating the account, try again']));
+        $app->halt(400, json_encode(['message' => 'There was a problem creating the account, try again']));
     }
 
     // Success, account created!
