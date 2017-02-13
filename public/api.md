@@ -62,6 +62,14 @@ Returns the latest public posts from all users across the network. Will return 2
 
 Returns the authorized user's timeline, including posts from every account they have followed. Will return 20 posts. Results can be paged through using the ?offset= parameter. For example, ?offset=20 and so forth.
 
+### Get Posts Containing a Hashtag <span class="level one"></span>
+
+- GET /hashtag/[hashtag]
+- Accept: application/json
+- Authorization: Bearer [access_token] *Optional*
+
+Returns all posts containing the given hashtag. Results can be paged through using the ?offset= parameter. For example, ?offset=20 and so forth. 
+
 ### Get User Profile <span class="level one"></span>
 
 - GET /users/[username]
