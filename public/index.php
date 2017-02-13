@@ -35,7 +35,8 @@ require __DIR__ . '/../app/config/jwt.php';
 
 // Default route conditions
 \Slim\Route::setDefaultConditions(array(
-    'username' => '[a-zA-Z0-9_]{1,32}'
+    'username' => '[a-zA-Z0-9_]{1,32}',
+    'hashtag' => '[a-zA-Z0-9]{1,200}'
 ));
 
 // Pagination middleware
@@ -134,6 +135,7 @@ require __DIR__ . '/../app/routes/account.php';
 require __DIR__ . '/../app/routes/users.php';
 require __DIR__ . '/../app/routes/posts.php';
 require __DIR__ . '/../app/routes/comments.php';
+require __DIR__ . '/../app/routes/hashtags.php';
 
 // Run app
 $app->run();
